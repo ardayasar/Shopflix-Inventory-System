@@ -62,18 +62,23 @@ div[class='menu'] > a.active > button::before{
     right: 0;
 }
 
+/* Placeholder */
+div[class='place']{
+    width: 800px;
+    margin: auto;
+}
+
 /* General Statics */
 
 div[class='general-statics']{
-    width: 96%;
-    height: 100px;
-    margin: 0 auto;
-    padding: 0;
+    width: 100%;
+    height: auto;
+    margin: 14px auto;
 }
 
 div[class='general-statics'] > div[class='statics']{
-    width: 96%;
-    height: 100px;
+    width: 100%;
+    height: auto;
     margin: 0;
     padding: 0;
     display: flex;
@@ -83,7 +88,8 @@ div[class='general-statics'] > div[class='statics']{
 }
 
 div[class='general-statics'] > div[class='statics'] > div[class='static']{
-    width: 140px;
+    width: calc(33% - 12px);
+    max-width: 220px;
     height: 140px;
     background-color: white;
     padding: 30px;
@@ -109,3 +115,40 @@ div[class='general-statics'] > div[class='statics'] > div[class='static'] > p{
     margin: 0;
 }
 
+/* Charts */
+
+div[class='price_chart']{
+    width: px;
+    /* height: auto; */
+    height: auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.10);
+}
+
+div[class='price_chart'] > div[class='choice_group']{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+div[class='price_chart'] > div[class='choice_group'] > button[class='choice_box']{
+    background-color: transparent;
+    font-size: 16px;
+    border: 1px solid rgb(97, 97, 97);
+    color: #1c1c1c;
+    border-radius: 3px;
+    padding: 4px 12px;
+    text-align: center;
+}
+
+div[class='price_chart'] > div[class='choice_group'] > button[class='choice_box selected']{
+    background-color: transparent;
+    font-size: 16px;
+    border: 1px solid #1376ff;
+    color: #1c1c1c;
+    border-radius: 3px;
+    padding: 4px 12px;
+    text-align: center;
+}
