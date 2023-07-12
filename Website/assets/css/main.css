@@ -66,14 +66,18 @@ div[class='menu'] > a.active > button::before{
 
 div[class='general-statics']{
     width: 96%;
-    height: 100px;
-    margin: 0 auto;
-    padding: 0;
+    height: auto;
+    margin: 14px auto;
+}
+
+div[class='general-statics'] > h2{
+    text-align: center;
+    border: 3px solid;
 }
 
 div[class='general-statics'] > div[class='statics']{
     width: 96%;
-    height: 100px;
+    height: auto;
     margin: 0;
     padding: 0;
     display: flex;
