@@ -141,6 +141,7 @@ div[class='price_chart'] > div[class='choice_group'] > button[class='choice_box'
     border-radius: 3px;
     padding: 4px 12px;
     text-align: center;
+    cursor: pointer;
 }
 
 div[class='price_chart'] > div[class='choice_group'] > button[class='choice_box selected']{
