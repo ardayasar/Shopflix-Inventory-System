@@ -87,10 +87,13 @@ function change_chart(chart_name) {
     chart = new Chart(ctx, charts[chart_name]);
 }
 
-const changerElement = document.getElementById('chart_changer');
-document.onclick = (e) => {
-    document.querySelector('.selected').setAttribute('class', 'choice_box');
-    e.target.setAttribute('class', 'choice_box selected');
-    chart.destroy();
-    chart = new Chart(ctx, charts[e.target.attributes.chart.value]);
-}
+const changerElement = document.querySelectorAll('#chart_changer');
+
+changerElement.forEach(element => {
+    element.onclick = (e) => {
+        document.querySelector('.selected').setAttribute('class', 'choice_box');
+        e.target.setAttribute('class', 'choice_box selected');
+        chart.destroy();
+        chart = new Chart(ctx, charts[e.target.attributes.chart.value]);
+    }
+});

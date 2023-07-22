@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/12080290df.js" crossorigin="anonymous"></script>
+    <title>Inventory System | Shopflix</title>
+</head>
+<body>
+    
+    <div class="menu">
+        <a href="index.html"><button type="button">Anasayfa</button></a>
+        <a href="products.html" class="active"><button type="button">Ürünler</button></a>
+    </div>
+
+
+    <div class="place">
+        
+        <div class="inventory">
+            <div class="inventory_header">
+                <button type="button">#</button>
+                <button type="button">Ürün İsmi</button>
+                <button type="button">Barkod</button>
+                <button type="button">Satış Fiyatı</button>
+                <button type="button">Güncel Market Fiyatı</button>
+            </div>
+
+            <div class="item_list">
+                <div class="item">
+                    <div class="photo"></div>
+                    <div class="information">
+                        <p>Ürün İsmi</p>
+                        <p>Barkod</p>
+                        <p id="turkish-lira" price-status="normal">140.99</p>
+                        <p id="turkish-lira">140.99</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="photo"></div>
+                    <div class="information">
+                        <p>Ürün İsmi</p>
+                        <p>Barkod</p>
+                        <p id="turkish-lira" price-status="bad">145.99</p>
+                        <p id="turkish-lira">140.99</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="photo"></div>
+                    <div class="information">
+                        <p>Ürün İsmi</p>
+                        <p>Barkod</p>
+                        <p id="turkish-lira" price-status="good">139.99</p>
+                        <p id="turkish-lira">140.99</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <!-- Sistem Baslat / Durdur -->
+    
+</body>
+
+<!-- <script src="./assets/js/chart.js"></script> -->
+</html>

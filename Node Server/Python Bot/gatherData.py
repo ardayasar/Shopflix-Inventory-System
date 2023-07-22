@@ -41,16 +41,22 @@ for category in tqdm(category_list):
             except:
                 productBrand = 'null'
 
+            imgURL = None
+            try:
+                imgURL = product.select_one('img#primary-image').text
+            except:
+                imgURL = 'https://t4.ftcdn.net/jpg/04/73/25/49/360_F_473254957_bxG9yf4ly7OBO5I0O5KABlN930GwaMQz.jpg'
+
             productTitle = product.select_one('div.showcase-content > div.showcase-title > a').text
             productPrice = product.select_one(
                 'div.showcase-content > div.showcase-price > div.showcase-price-new').text.strip()
 
             productsList.append({'productURL': productURL, 'productBrand': productBrand,
-                                                   'productTitle': productTitle, 'productPrice': productPrice})
+                                                   'productTitle': productTitle, 'productPrice': productPrice, 'productImageURL': imgURL})
 
             category_list[category]['products'] = productsList
 
-        print('Completed ', category)
+        # print('Completed ', category)
         time.sleep(2)
     except Exception as e:
         print('Error in ', category)
