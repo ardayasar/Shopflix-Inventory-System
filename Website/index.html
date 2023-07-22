@@ -11,8 +11,8 @@
 <body>
     
     <div class="menu">
-        <a href="#" class="active"><button type="button">Home</button></a>
-        <a href="#"><button type="button">Products</button></a>
+        <a href="index.html" class="active"><button type="button">Anasayfa</button></a>
+        <a href="products.html"><button type="button">Ürünler</button></a>
     </div>
 
 
@@ -21,16 +21,16 @@
 
             <div class="statics">
                 <div class="static">
-                    <h2>Products</h2>
+                    <h2>Ürünler</h2>
                     <p>0</p>
                 </div>
                 <div class="static">
-                    <h2>Categories</h2>
+                    <h2>Kategoriler</h2>
                     <p>0</p>
                 </div>
                 <div class="static">
-                    <h2>Status</h2>
-                    <p status="green">Active</p>
+                    <h2>Durum</h2>
+                    <p status="green">Aktif</p>
                 </div>
             </div>
             
@@ -38,8 +38,8 @@
     
         <div class="price_chart">
             <div class="choice_group">
-                <button type="button" class="choice_box selected">Price Chart</button>
-                <button type="button" class="choice_box">Compare Chart</button>
+                <button type="button" class="choice_box selected" id="chart_changer" chart="earning_chart">Kazanç Tablosu</button>
+                <button type="button" class="choice_box" id="chart_changer" chart="compare_chart">Karşılaştırma</button>
             </div>
             <div class="chart" id="chart_selector">
                 <canvas id="chartpoint"></canvas>
@@ -47,49 +47,9 @@
         </div>
     </div>
     
+    <!-- Sistem Baslat / Durdur -->
+    
 </body>
 
-<script>
-    const ctx = document.getElementById('chartpoint');
-
-    const chart = new Chart(ctx, {
-        type: 'polarArea',
-        data: {
-            labels: ['Trendyol', 'Hepsiburada', 'Pazarama', 'Cimri', 'N11', 'PTT'],
-            datasets: [{
-                label: 'Price',
-                backgroundColor: ['rgba(35, 31, 32, 0.5)', 'rgba(247, 96, 2, 0.5)', 'rgba(28, 41, 238, 0.5)', 'rgba(45, 134, 231, 0.5)', 'rgba(92, 62, 188, 0.5)', 'rgba(242, 188, 5, 0.5)'],
-                data: [12, 8, 6, 11, 4, 3],
-                
-
-            }]
-        },
-
-        // Configuration options go here
-        options: {
-            responsive: true,
-            scales: {
-            r: {
-                pointLabels: {
-                display: true,
-                centerPointLabels: true,
-                font: {
-                    size: 18
-                }
-                }
-            }
-            },
-            plugins: {
-            legend: {
-                position: 'top',
-            },
-            title: {
-                display: true,
-                text: 'Fiyat Fark Tablosu (%)'
-            }
-            }
-        },
-    });
-    
-</script>
+<script src="./assets/js/chart.js"></script>
 </html>
