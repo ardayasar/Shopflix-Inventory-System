@@ -1,0 +1,55 @@
+:root{
+    --normal-color: #000000;
+    --passive-color: #63656D;
+    --selected-color: #438DFD;
+
+    --button-normal-color: #000000;
+    --button-normal-background-color: #FFFFFF;
+    --button-border-color: #E5E5E7;
+    --button-selected-color: #FFFFFF;
+    --button-selected-background-color: #438DFD;
+
+    --menu-normal-color: #000000;
+    --menu-selected-color: #438DFD;
+    --menu-selected-background-color: #FFFFFF;
+    --menu-passive-color: #52565E;
+    --menu-profile-border-color: #EEEDF0;
+    --menu-background-color: #F8F8FA;
+
+    --main-background-color: #FFFFFF;
+
+    --directory-active-background-color: #F5F4F8;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-background-color);
+    display: flex;
+    flex-direction: row;
+}
+
+div[class='menu']{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 340px;
+    height: 100%;
+    background-color: var(--menu-background-color);
+    overflow-y: scroll;
+}
+
+div[class='page']{
+    height: 100%;
+    width: calc(100% - 340px);
+    overflow-y: scroll;
+}
