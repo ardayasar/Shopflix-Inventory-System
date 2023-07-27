@@ -4,24 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/d2wycf.css">
+    <script src="https://kit.fontawesome.com/12080290df.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Dashboard | BoxPoint</title>
 </head>
     <body>
         
-        <div class="menu">
+        <div class="trp" id="trp"></div>
+
+        <div class="menu" id="menu">
             <div class="logo">
-                <img src="./assets/img/logo.png" alt="BoxPoint" class="logo">
+                <h2 id="logofont"><i class="fa-solid fa-box-open"></i>BoxPoint</h2>
             </div>
             <div class="profile">
-                
+                <div class="profile-img" style="background-image: url('./assets/image/user.png');"></div>
+                <p class="profile-name">Arda Yasar<br><a href="#"><i class="fa-solid fa-right-from-bracket"></i> Çıkış Yap</a></p>
             </div>
             <div class="menu-items">
-                <a href="#"><button type="button"></button></a>
+                <a href="#"><button type="button"><i class="fa-solid fa-house"></i> Anasayfa</button></a>
+                <a href="#" selected="true"><button type="button"><i class="fa-solid fa-boxes-stacked"></i> Ürünler</button></a>
+                <a href="#"><button type="button"><i class="fa-solid fa-tags"></i> Fiyatlandırma</button></a>
+                <a href="#"><button type="button"><i class="fa-solid fa-truck-ramp-box"></i> Siparişler</button></a>
+                <a href="#"><button type="button"><i class="fa-solid fa-percent"></i> Promosyon</button></a>
+                <a href="#"><button type="button"><i class="fa-solid fa-coins"></i> Finans</button></a>
             </div>
+        </div>
+
+        <div class="topmenu">
+            <button type="button" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+            <h2>BoxPoint</h2>
         </div>
 
         <div class="page">
 
+            <div class="path">
+                <div class="general">
+                    <h1>Ürünler</h1>
+                    <div class="fast-access">
+                        <button type="button" id="bell" status="active"><i class="fa-regular fa-bell"></i></button>
+                        <button type="button"><i class="fa-regular fa-circle-question"></i></button>
+                    </div>
+                </div>
+                <div class="pathway">
+                    <a href="#">Anasayfa</a>
+                    <span><i class="fa-solid fa-chevron-right"></i></span>
+                    <a href="#">Ürünler</a>
+                </div>
+            </div>
+            <hr style="margin-top: 30px;">
+            <div class="filters">
+                <input type="search" id="search-input" placeholder="Ürün Ara (isim, barkod)">
+                <div class="status">
+                    <button type="button" class="status-item" status="active" id="all">Hepsi</button>
+                    <button type="button" class="status-item" id="red">Kötü</button>
+                    <button type="button" class="status-item" id="white">Normal</button>
+                    <button type="button" class="status-item" id="green">İyi</button>
+                </div>
+            </div>
+
+            <div class="datatable">
+                
+            </div>
+
         </div>
     </body>
+
+    <script src="./assets/js/menu.js"></script>
+    <script src="./assets/js/search.js"></script>
+
 </html>
